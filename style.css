@@ -360,7 +360,7 @@ a {
   color: #2b283a;
 }
 /* media query */
-@media (max-width: 900px) {
+@media (max-width: 728px) {
  .destinations{
   display: flex;
   flex-direction: column;
@@ -375,7 +375,7 @@ a {
     height: auto;
     display: flex;
     left: 0;
-    margin: 10px 15px;
+    gap: 20px
   }
   .card--image {
     width: 70vw;
