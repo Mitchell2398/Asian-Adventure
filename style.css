@@ -1,0 +1,474 @@
+/* style.css */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+html,
+body {
+  margin: 0 0;
+  padding: 0 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+ 
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.navBar {
+  display: flex;
+  position: fixed;
+  z-index: 105;
+  top: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px; /* Adjust padding as needed */
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+#navBar.scrolled {
+  background-color: white;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.logo {
+  color: white;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+#logo.scrolled {
+  color: black;
+}
+
+.hamburger {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+
+.hamburger.scrolled {
+  color: black;
+}
+
+
+.itemContainer {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navItem {
+  margin-right: 20px; /* Adjust spacing */
+}
+
+.navItem a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s; /* Add a smooth color transition */
+}
+
+#itemList.scrolled a {
+  color: black;
+}
+
+.navItem a:hover {
+  color: #333; /* Change color on hover */
+}
+
+.overlay {
+  background-color: black;
+}
+
+/* Responsive styles for Navbar*/
+@media (max-width: 768px) {
+  .hamburger {
+      display: block;
+  }
+
+  .itemContainer {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .navItem {
+      margin: 10px 0;
+  }
+  
+  #itemList.scrolled {
+      background-color: white;
+  }
+}
+
+/* Hero Banner */
+
+.HeroBanner {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 75px;
+  display: flex;
+  align-items: center; /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
+}
+
+.HeroBannerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.textContainer {
+  z-index: 1;
+  text-align: center;
+}
+
+.HeroTagLine {
+  font-weight: 800;
+  color: white;
+  font-size: 36px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.subTagLine {
+  color: white;
+  font-size: 18px;
+  font-weight: 300; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .HeroTagLine {
+    font-size: 24px;
+  }
+
+  .subTagLine {
+    font-size: 14px;
+  }
+}
+
+
+/* About me section */
+
+.aboutUsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightCol,
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.aboutImg {
+  height: auto;
+  width: 50%;
+  border-radius: 5px;
+}
+
+.aboutMeText {
+  text-align: center;
+  width: 80%;
+  line-height: 20px;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .aboutImg {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+}
+
+
+/* Destinations */
+
+.destinationsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 50px 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive column width */
+  grid-auto-rows: auto; /* Automatic row height */
+  grid-gap:50px; /* Gap between grid items */
+
+  
+}
+
+.card {
+  width: 80%; /* Increased width */
+  height: 320px; /* Increased height */
+  left: 39px;
+  box-sizing: content-box;
+  padding: 50px 0;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+}
+
+#card1 {
+  grid-area: 1 / 1 / 1 / 1;
+}
+
+#card2 {
+  grid-area: 2 / 1 /2  / 1;
+}
+
+#card3 {
+  grid-area: 3/ 1 / 3 / 1;
+}
+
+.card--image {
+  width: 275px;
+  border-radius: 9px;
+  height: auto; /* Increased height */
+  left: 1px;
+  border-radius: 5px;
+}
+
+
+.card--stats {
+  position: relative;
+  width: 326px;
+  height: 144px;
+}
+
+.location {
+  height: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.17em;
+  line-height: 12px;
+  color: #2b283a;
+  text-transform: uppercase;
+}
+.icon {
+  height: 10px;
+  margin-right: 4px;
+  font-size: 16px;
+}
+
+.google-maps {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  border-bottom: 1px solid #918e9b;
+  margin-left: 12px;
+}
+a {
+  text-decoration: none;
+  color: #918e9b;
+}
+
+.desttitle {
+  margin-top: 4px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 30px;
+  color: #2b283a;
+}
+.card-date {
+  margin-top: 7px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #2b283a;
+}
+
+.card-description {
+  width: 450px;
+  height: 60px;
+  margin-top: 9px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: justify;
+  color: #2b283a;
+}
+/* media query */
+@media (max-width: 900px) {
+ .destinations{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ }
+ 
+  .card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    display: flex;
+    left: 0;
+    margin: 10px 15px;
+  }
+  .card--image {
+    width: 70vw;
+  }
+  .info-location {
+    text-align: start;
+  }
+  .title {
+    text-align: center;
+  }
+  .card-date {
+    position: relative;
+    top: -5px;
+    text-align: center;
+    margin: 0;
+  }
+  .card-description {
+    width: 100%;
+  }
+}
+
+
+/* Contact */
+.contactContainer {
+  width: 100%;
+  background-color: #f0f0f0; /* Adjust background color as needed */
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.wrapperContact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.leftColContact,
+.rightColContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.textContact {
+  width: 80%;
+  text-align: center;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .wrapperContact {
+    flex-direction: column;
+    
+  }
+
+  .leftColContact,
+  .rightColContact {
+    flex: none;
+  }
+}
+
+/* Styling for the footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Styling for the logo in the footer */
+.logo {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Styling for the navigation items in the footer */
+.itemContainerFooter {
+  list-style: none;
+  padding: 0;
+}
+
+.navItemFooter {
+  display: inline;
+  margin: 0 10px;
+  font-size: 16px;
+  text-transform: capitalize; /* Capitalize text in navigation items */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Style for the hover effect on navigation items */
+.navItemFooter:hover {
+  text-decoration: underline;
+}
