@@ -132,6 +132,12 @@ p {
   #itemList.scrolled {
     background-color: white;
   }
+
+  .title {
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 2rem;
+  }
 }
 
 /* Hero Banner */
@@ -183,11 +189,11 @@ p {
   }
 
   .HeroTagLine {
-    font-size: 24px;
+    font-size: 2rem;
   }
 
   .subTagLine {
-    font-size: 14px;
+    font-size: 1.5rem;
   }
 }
 
@@ -230,11 +236,15 @@ p {
 }
 
 @media (max-width: 768px) {
+  .aboutUsContainer {
+    margin-bottom: 25px;
+  }
+  
   .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
   }
 
   .aboutImg {
@@ -267,7 +277,7 @@ p {
 
 .card {
   width: 80%;
-  height: 320px;
+  height: 100%;
   left: 39px;
   box-sizing: content-box;
   padding: 50px 0;
@@ -333,7 +343,6 @@ a {
 
 .desttitle {
   padding-top: 10px;
-
   font-style: normal;
   font-weight: 700;
   font-size: 2rem;
@@ -342,24 +351,42 @@ a {
 }
 .card-date {
   margin-top: 7px;
-
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   color: #2b283a;
+
 }
 
 .card-description {
   width: 450px;
-  height: 60px;
-  margin-top: 9px;
-
+  height: 100%;
+  margin-bottom: 10px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-align: justify;
   color: #2b283a;
+}
+
+.learn-more-btn {
+  background-color: #f55a5a;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.learn-more-btn:hover {
+  background-color: #d14949;  /* Darker shade for hover effect */
+}
+
+.learn-more-btn a {
+  text-decoration: none; 
+  color: white;
+  font-weight: bold;
 }
 /* media query */
 @media (max-width: 728px) {
@@ -465,4 +492,25 @@ a {
 /* Style for the hover effect on navigation items */
 .navItemFooter:hover {
   text-decoration: underline;
+}
+
+/* /* Destination pages  */
+#intro, #details, #booking {
+  padding: 2em;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.detail {
+  border: 1px solid #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: #fff;
+}
+
+#booking .package {
+  background-color: #009688;
+  color: #fff;
+  padding: 1em;
+  border-radius: 5px;
 }

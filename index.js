@@ -27,8 +27,6 @@ document.querySelectorAll('nav a').forEach(anchor => {
         behavior: 'smooth'
       });
 
-      const list = document.getElementById("itemList")
-      list.style.display ="none"
     });
   });
 
@@ -41,5 +39,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
         menu.style.display = "none";
     }
 });
+
+
 
 
