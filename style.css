@@ -157,6 +157,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 10%;
   position: absolute;
   top: 0;
   left: 0;
@@ -171,7 +172,7 @@ p {
   font-weight: 800;
   color: white;
   font-size: 3rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   margin-bottom: 5px;
 }
 
@@ -179,7 +180,7 @@ p {
   color: white;
   font-size: 1.5rem;
   font-weight: 300;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Styles */
@@ -292,6 +293,7 @@ p {
 
 #card2 {
   grid-area: 2 / 1 /2 / 1;
+  flex-direction: row-reverse;
 }
 
 #card3 {
@@ -308,10 +310,10 @@ p {
   border-radius: 5px;
 }
 
-.card--stats {
-  position: relative;
-  width: 326px;
-  height: 144px;
+.card-stats {
+  display: flex;
+  flex-direction: column;
+ align-items: start;
 }
 
 .location {
@@ -398,13 +400,14 @@ a {
     justify-content: center;
   }
 
-  .card {
+  .card, #card2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
     display: flex;
+    padding: 25px 0px;
     left: 0;
   }
 
@@ -414,6 +417,11 @@ a {
   .destTitle {
     text-align: center;
   }
+
+  .card-stats { 
+    align-items: center;
+  }
+
   .card-date {
     position: relative;
     top: -5px;
@@ -423,6 +431,9 @@ a {
   .card-description {
     width: 100%;
     text-align: center;
+  }
+  .learn-more-btn, .learn-more-btn a{
+    justify-self: center;
   }
 }
 
@@ -484,17 +495,29 @@ a {
   display: inline;
   margin: 0 10px;
   font-size: 16px;
-  text-transform: capitalize; /* Capitalize text in navigation items */
+  text-transform: capitalize; 
   color: #fff;
   text-decoration: none;
 }
 
-/* Style for the hover effect on navigation items */
+.socialMediaContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  width: 40px;
+  height:  40px;
+  object-fit: cover;
+  margin-top: 10px;
+  margin-right: 30px;
+}
+
 .navItemFooter:hover {
   text-decoration: underline;
 }
 
-/* /* Destination pages  */
+
 #intro, #details, #booking {
   padding: 2em;
   max-width: 1200px;
